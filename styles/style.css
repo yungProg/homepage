@@ -1,0 +1,125 @@
+:root {
+    --main-heading: clamp(40px, 10vw, 2.8rem);
+    --sub-heading-1: clamp(24px, 2vw, 2.5rem);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(20px, 1.2vw, 5rem);
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background-color: #4ee0fa;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    padding: 48px 32px;
+}
+
+.pfp-wrapper {
+    position: relative;
+}
+
+.pfp-wrapper > h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #8d8d8d;
+    font-size: var(--main-heading)
+}
+
+.about-me {
+    background-color: #fff;
+    padding: 48px 32px;
+    letter-spacing: 0.5px;
+}
+
+.about-me > * {
+    padding: 12px 14px;
+    margin: 12px 0;
+}
+
+.about-me > h2 {
+    font-size: var(--sub-heading-1)
+}
+
+.social-links-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-links-wrapper > * {
+    padding: 8px 4px;
+}
+
+.social-links-wrapper > *:hover {
+    cursor: pointer;
+}
+
+.main {
+    padding: 48px 32px;
+}
+
+.main > h2 {
+    font-size: var(--sub-heading-1)
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 16px;
+}
+
+.screenshot-wrapper {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one {
+    background-color: chartreuse;
+}
+
+.two {
+    background-color: chocolate;
+}
+
+.three {
+    background-color: cornflowerblue;
+}
+
+.four {
+    background-color: crimson;
+}
+
+.five {
+    background-color: darkgoldenrod;
+}
+
+.six {
+    background-color: slateblue;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.footer {
+    background-color: cadetblue;
+}
