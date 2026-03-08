@@ -24,11 +24,12 @@ a {
 }
 
 .header {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     display: grid;
     grid-template-columns: max-content 1fr;
     align-items: center;
     padding: 48px 32px;
+    background: linear-gradient(170deg, var(--secondary-color) 70%, transparent 70%);
 }
 
 .pfp-wrapper {
@@ -48,8 +49,9 @@ a {
 
 .about-me {
     background-color: #fff;
-    padding: 48px 32px;
+    padding: 100px 32px;
     letter-spacing: 0.5px;
+    box-shadow: 0 0 2px 2px #00000028;
 }
 
 .about-me > * {
@@ -90,7 +92,7 @@ h2 {
 
 .works-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1.5rem;
     margin-top: 16px;
 }
@@ -158,7 +160,7 @@ h2 {
     background-color: var(--secondary-color);
     padding: 48px 36px;
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .call-to-action {
@@ -169,4 +171,103 @@ h2 {
 
 .call-to-action > * {
     margin-top: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        display: block;
+        position: relative;
+    }
+
+    .header img {
+        float: left;
+        max-width: 350px;
+        margin-right: 24px;
+        margin-bottom: 12px;
+    }
+
+    .pfp-wrapper {
+        position: static;
+    }
+
+    .pfp-wrapper > h1 {
+        left: 300px;
+        top: 50px;
+        bottom: auto;
+        right: auto;
+        background: none;
+    }
+
+    .about-me {
+        margin-top: 100px;
+        margin-left: 80px;
+        padding: 24px 32px;
+    }
+
+    .works-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .header {
+        grid-template-columns: 1fr;
+        place-content: center;
+        place-items: center;
+        background: none;
+        padding: 0;
+    }
+
+    .header img {
+        max-width: 238px;
+    }
+
+    .header h1 {
+        color: #000;
+        background: none;
+        position: static;
+    }
+
+    .header .pfp-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        padding: 24px 8px;
+        position: relative;
+        background: linear-gradient(170deg, var(--secondary-color) 70%, transparent 70%);
+    }
+
+    .about-me {
+        padding: 24px 8px 0 8px;
+    }
+
+    .works-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        place-items: center;
+        gap: 32px;
+        grid-template-columns: 1fr;
+    }
+
+    .footer img {
+        max-width: 250px;
+    }
+
+    .social-links-wrapper.last {
+        justify-content: center;
+    }
 }
